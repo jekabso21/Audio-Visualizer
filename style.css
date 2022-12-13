@@ -3,7 +3,10 @@ body {
   margin: 0;
   overflow: hidden;
 }
-
+/*if in fullscreen then fix the background*/
+body:fullscreen {
+  background-color: #1a1a1d;
+}
 
 .cover {
   background-color:  #1a1a1d;
