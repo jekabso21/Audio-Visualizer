@@ -41,3 +41,16 @@ function draw() {
   let spectrum = fft.analyze()
   updateParticles(spectrum)
 }
+
+//if user is in fullscreen using f11 then the canvas will be fullscreen
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight)
+}
+
+function resizeCanvas(w, h) {
+    canvas.width = w
+    canvas.height = h
+}
+
+//execute the functiion windowResized when the user presses f11
+document.addEventListener('fullscreenchange', windowResized)
