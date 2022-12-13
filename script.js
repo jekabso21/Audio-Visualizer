@@ -39,5 +39,5 @@ function setup() {
 function draw() {
   background(0,0,0) // RGB format
   let spectrum = fft.analyze()
-  updateParticles(spectrum) 
+  updateParticles(spectrum)
 }
