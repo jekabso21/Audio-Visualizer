@@ -4,7 +4,7 @@ let fft
 let Particle = function (position) {
   this.position = position
   this.speed = createVector(0, 1)
-  this.color = [(194), (47), (47)]
+  this.color = color(208, 0, 0)
 
   this.draw = function () {
     circle(this.position.x, this.position.y, this.diameter)
@@ -12,7 +12,7 @@ let Particle = function (position) {
   }
   // makes them shimmer :scream:
   this.update = function (energy) {
-    this.diameter = random(2,8) + energy * 100
+    this.diameter = random(1,8) + energy * 80
     this.position.y += this.speed.y * energy * 10
     if (this.position.y > height) {
       this.position.y = 0
